@@ -90,8 +90,7 @@ public class RemoteBuildListener extends MessageQueueListener {
                             continue;
                         }
 
-                        if (t.getProjectName().equals(json.getString(KEY_PROJECT))
-                                && t.getRemoteBuildToken().equals(json.getString(KEY_TOKEN))) {
+                        if (t.getRemoteBuildToken().equals(json.getString(KEY_TOKEN))) {
                             if (json.containsKey(KEY_PARAMETER)) {
                                 t.scheduleBuild(queueName, json.getJSONArray(KEY_PARAMETER));
                             } else {
