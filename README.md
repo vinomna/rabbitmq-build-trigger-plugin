@@ -59,10 +59,11 @@ Application Message Format
     ]
 }
 ```
+A project name and the token must match (in this version only the token will be checked).
 
 name in each parameters is compared with existing parameter name by case-insensitive.
 
-A message must have two properties.
+A message must have two properties. 
 
 ```
 content_type: application/json
